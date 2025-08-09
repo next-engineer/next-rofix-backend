@@ -2,6 +2,9 @@ spring:
   config:
     activate:
       on-profile: prod
+  cors:
+    allowed-origins: http://localhost:3000 # 추후에 배포 도메인으로 교체
+    allowed-methods: GET, POST, PUT, DELETE, OPTIONS
   datasource:
     url: jdbc:mysql://next-db.c74828wmikhx.ap-northeast-2.rds.amazonaws.com:3306/rofix?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
